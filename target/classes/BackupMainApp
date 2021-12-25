@@ -1,0 +1,35 @@
+//		Elements elements = new Elements();		
+		//autoscroll
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		//500 pixel vertical
+		js.executeScript("window.scrollBy(0,500)");
+//		elements.menuElements();		
+//		elements.menuTextBox();
+//		elements.formTextBox("Test", "test@test.com", "Test", "Test");		
+//		elements.menuCheckBox();		
+//		elements.menuRadioButton();
+				
+		//Forms
+		Forms forms = new Forms();
+		forms.menuForms();
+//		forms.listState(2);
+//		List<String> listString = new ArrayList<String>();
+//		listString.add("English");
+//		listString.add("Chemistry");
+//		forms.pilihSubject(listString);
+		forms.pilihGender("");
+		
+		//Ambil text kemudian simpan text ke komputer
+//		System.out.println("Content Berita: "+kompas.contentBerita());
+	//	
+//		File file = new File("src/main/resources/ContentBerita.txt");
+//		try {
+//			FileUtils.writeStringToFile(file, kompas.contentBerita(), Charset.defaultCharset());
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+		//DragAndDrop
+		driver.switchTo().frame(driver.findElement(By.cssSelector("#content > iframe")));
+		Jqueryui jqueryui = new Jqueryui();
+		jqueryui.DraggableDroppable();
